@@ -1,5 +1,6 @@
 import './App.css'
-
+import heroEarth from './assets/hero-earth.png'
+import smartRecycling from './assets/smart-recycling.png'
 function App() {
   return (
     <div className="website">
@@ -48,13 +49,19 @@ function App() {
             </div>
           </div>
 
-          <div className="cycle-card">
-            <div className="cycle-icon">♻</div>
-            <div className="cycle-title">正向循環</div>
-            <div className="cycle-subtitle">聯手減碳</div>
-          </div>
+        <div className="hero-image">
+         <img src={heroEarth} alt="永續循環" />
+        </div>
+        
         </section>
-
+        <section className="smart-recycling-section">
+        <img
+        src={smartRecycling}
+        alt="正聯環保智慧清運與永續循環"
+        className="smart-recycling-image"
+        />
+        </section>
+        
         <section className="intro" id="about">
           <div className="section-label">ABOUT US</div>
           <h2>不只是清運，更是資源循環的一環</h2>
@@ -145,6 +152,20 @@ function App() {
         </section>
       </main>
 
+<div className="mobile-contact-bar">
+  <a href="tel:035240065" className="call-button">
+    ☎ 立即來電
+  </a>
+
+  <a
+    href="https://lin.ee/V42RwgT"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="line-button"
+  >
+    LINE 諮詢
+  </a>
+</div>
       <footer>
         <div>正聯環保有限公司</div>
         <div>正向循環・聯手減碳</div>

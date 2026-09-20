@@ -74,19 +74,26 @@ nav {
 
 nav a {
   font-size: 14px;
+  font-weight: 600;
   color: #45544b;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
 }
 
 nav a:hover {
-  color: #2f6b4f;
+  color: #ffffff;
+  background: #2f6b4f;
+  box-shadow: 0 5px 14px rgba(47, 107, 79, 0.22);
+  transform: translateY(-2px);
 }
 
 /* ===== 首頁主視覺 ===== */
 .hero {
-  min-height: 610px;
+  min-height: 520px;
   display: flex;
   align-items: center;
-  padding: 90px 8%;
+  padding: 55px 8%;
   background:
     radial-gradient(circle at 85% 30%, rgba(83, 145, 107, 0.22), transparent 35%),
     linear-gradient(135deg, #eef4ed 0%, #ffffff 55%, #e8f0e8 100%);
@@ -113,12 +120,20 @@ nav a:hover {
   line-height: 1.08;
   color: #1e382c;
   letter-spacing: -2px;
+  text-shadow:
+  0 -1px 0 rgba(255, 255, 255, 0.95),
+  0 2px 0 rgba(255, 255, 255, 0.55),
+  0 4px 5px rgba(30, 56, 44, 0.22),
+  0 8px 18px rgba(47, 107, 79, 0.18);
 }
-
 .hero h1 span {
-  color: #4d805f;
+  color: #5fa879;
+  text-shadow:
+    0 -1px 0 rgba(255, 255, 255, 0.95),
+    0 2px 0 rgba(255, 255, 255, 0.45),
+    0 4px 6px rgba(38, 92, 65, 0.22),
+    0 8px 18px rgba(72, 160, 110, 0.25);
 }
-
 .hero-text {
   max-width: 650px;
   margin: 28px 0;
@@ -280,6 +295,68 @@ footer {
   background: #172b21;
   color: #dbe4de;
   font-size: 13px;
+}
+.hero-image {
+  width: 46%;
+  max-width: 620px;
+  margin-left: auto;
+}
+
+.hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+  opacity: 0.94;
+}
+/* ===== 智慧循環圖片 ===== */
+.smart-recycling-section {
+  padding: 16px 3% 0;
+  background: #f7f8f5;
+}
+
+.smart-recycling-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* ===== 手機底部聯絡按鈕 ===== */
+.mobile-contact-bar {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .mobile-contact-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: flex;
+    gap: 10px;
+    padding: 10px 12px;
+    background: white;
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .mobile-contact-bar a {
+    flex: 1;
+    padding: 14px 8px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  .call-button {
+    background: #e52521;
+  }
+
+  .line-button {
+    background: #06c755;
+  }
 }
 
 /* ===== 手機版 ===== */
