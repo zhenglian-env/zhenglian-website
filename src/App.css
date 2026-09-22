@@ -369,11 +369,10 @@ footer {
     display: none;
   }
 
-  .hero {
-    min-height: 540px;
-    padding: 70px 6%;
-  }
-
+ .hero {
+  min-height: 500px;
+  padding: 42px 6% 55px;
+}
  .hero h1 {
   font-size: 38px;
   line-height: 1.15;
