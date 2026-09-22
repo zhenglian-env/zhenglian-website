@@ -374,9 +374,11 @@ footer {
     padding: 70px 6%;
   }
 
-  .hero h1 {
-    font-size: 48px;
-  }
+ .hero h1 {
+  font-size: 38px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
 
   section {
     padding: 65px 6%;
