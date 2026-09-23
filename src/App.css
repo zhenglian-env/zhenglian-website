@@ -378,6 +378,22 @@ footer {
   line-height: 1.15;
   letter-spacing: -1px;
 }
+.hero {
+  position: relative;
+}
+
+.hero-image {
+  position: absolute;
+  width: 125px;
+  right: 5%;
+  top: 150px;
+  margin: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
 
   section {
     padding: 65px 6%;
