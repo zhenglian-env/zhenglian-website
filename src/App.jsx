@@ -1,17 +1,18 @@
 import './App.css'
 import heroEarth from './assets/hero-earth.png'
 import smartRecycling from './assets/smart-recycling.png'
+import zhenglianLogo from './assets/zhenglian-logo.png'
 function App() {
   return (
     <div className="website">
       <header className="navbar">
         <div className="brand">
-          <div className="brand-mark">♻</div>
-          <div>
-            <div className="brand-name">正聯環保</div>
-            <div className="brand-en">ZHENG LIAN ENVIRONMENTAL</div>
-          </div>
-        </div>
+  <img
+    src={zhenglianLogo}
+    alt="正聯環保有限公司"
+    className="brand-logo"
+  />
+</div>
 
         <nav>
           <a href="#about">關於正聯</a>
