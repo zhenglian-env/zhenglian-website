@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/hsinchu-food-waste-recycling",
+      "destination": "/index.html"
+    }
+  ]
+}

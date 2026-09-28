@@ -1,8 +1,35 @@
+import { useEffect } from 'react'
 import './App.css'
 import heroEarth from './assets/hero-earth.png'
 import smartRecycling from './assets/smart-recycling.png'
 import zhenglianLogo from './assets/zhenglian-logo.png'
+import HsinchuFoodWastePage from './HsinchuFoodWastePage'
 function App() {
+  const path = window.location.pathname.replace(/\/+$/, '') || '/'
+
+  useEffect(() => {
+    if (path === '/' && window.location.hash) {
+      const sectionId = window.location.hash.replace('#', '')
+
+      const timer = setTimeout(() => {
+        const section = document.getElementById(sectionId)
+
+        if (section) {
+          section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          })
+        }
+      }, 100)
+
+      return () => clearTimeout(timer)
+    }
+  }, [path])
+
+  if (path === '/hsinchu-food-waste-recycling') {
+    return <HsinchuFoodWastePage />
+  }
+
   return (
     <div className="website">
       <header className="navbar">
@@ -140,21 +167,29 @@ function App() {
               <strong>正聯環保有限公司</strong>
             </div>
 
-            <div>
-              <span>電話</span>
-              <strong>03-5240065</strong>
-            </div>
+          <div>
+  <span>聯絡電話</span>
+  <strong>
+    03-5240065
+    <br />
+    0965-092828
+  </strong>
+</div>
 
-            <div>
-              <span>服務區域</span>
-              <strong>新竹地區</strong>
+<div>
+  <span>服務區域</span>
+  <strong>
+    新竹市・新竹縣・竹北及周邊地區
+    <br />
+    其他地區歡迎洽詢
+  </strong>
             </div>
           </div>
         </section>
       </main>
 
 <div className="mobile-contact-bar">
-  <a href="tel:035240065" className="call-button">
+  <a href="tel:0965092828" className="call-button">
     ☎ 立即來電
   </a>
 

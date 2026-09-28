@@ -416,3 +416,323 @@ footer {
     gap: 8px;
   }
 }
+/* ========================================
+   新竹廚餘回收業者專屬頁面
+   ======================================== */
+
+.food-waste-page {
+  min-height: 100vh;
+  background: #f7f9f6;
+  color: #17211b;
+}
+
+.food-waste-header {
+  width: 100%;
+  min-height: 82px;
+  padding: 14px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid rgba(20, 70, 45, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.food-waste-brand {
+  display: flex;
+  align-items: center;
+}
+
+.food-waste-logo {
+  width: auto;
+  height: 52px;
+  display: block;
+}
+
+.food-waste-contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 22px;
+  border-radius: 999px;
+  background: #1f6d48;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.food-waste-contact-button:hover {
+  transform: translateY(-2px);
+  background: #18583a;
+}
+
+.food-waste-hero {
+  padding: 105px 7% 95px;
+  background:
+    radial-gradient(
+      circle at 80% 25%,
+      rgba(94, 190, 120, 0.18),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      #0d2419 0%,
+      #153c29 55%,
+      #1c5539 100%
+    );
+  color: #ffffff;
+}
+
+.food-waste-hero-content {
+  width: min(100%, 1050px);
+  margin: 0 auto;
+}
+
+.food-waste-eyebrow {
+  margin: 0 0 22px;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: #a7ddb6;
+}
+
+.food-waste-hero h1 {
+  margin: 0;
+  max-width: 900px;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+
+.food-waste-hero h1 span {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: clamp(27px, 4vw, 48px);
+  color: #d8f0df;
+}
+
+.food-waste-lead {
+  max-width: 760px;
+  margin: 32px 0 0;
+  font-size: 18px;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.83);
+}
+
+.food-waste-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 38px;
+}
+
+.food-waste-primary-button,
+.food-waste-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 25px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.food-waste-primary-button {
+  background: #ffffff;
+  color: #165234;
+}
+
+.food-waste-primary-button:hover {
+  transform: translateY(-2px);
+}
+
+.food-waste-secondary-button {
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  color: #ffffff;
+}
+
+.food-waste-secondary-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.food-waste-section {
+  width: min(1100px, 86%);
+  margin: 0 auto;
+  padding: 90px 0;
+}
+
+.food-waste-section-label {
+  margin: 0 0 13px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #358458;
+}
+
+.food-waste-section h2,
+.food-waste-cta h2 {
+  margin: 0 0 22px;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.25;
+  color: #163524;
+}
+
+.food-waste-section > p:not(.food-waste-section-label) {
+  max-width: 820px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #5b675f;
+}
+
+.food-waste-service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 45px;
+}
+
+.food-waste-card {
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid rgba(31, 109, 72, 0.11);
+  border-radius: 22px;
+  box-shadow: 0 14px 40px rgba(24, 73, 47, 0.06);
+}
+
+.food-waste-card h3 {
+  margin: 0 0 13px;
+  font-size: 22px;
+  color: #1e5b3c;
+}
+
+.food-waste-card p {
+  margin: 0;
+  line-height: 1.8;
+  color: #647068;
+}
+
+.food-waste-area {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  padding-left: 7%;
+  padding-right: 7%;
+  background: #edf4ef;
+}
+
+.food-waste-faq details {
+  margin-top: 16px;
+  padding: 22px 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(31, 109, 72, 0.11);
+}
+
+.food-waste-faq summary {
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 700;
+  color: #254d35;
+}
+
+.food-waste-faq details p {
+  margin: 16px 0 0;
+  line-height: 1.8;
+  color: #647068;
+}
+
+.food-waste-cta {
+  margin: 25px 7% 80px;
+  padding: 65px 7%;
+  text-align: center;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #173c29, #28724b);
+  color: #ffffff;
+}
+
+.food-waste-cta h2 {
+  color: #ffffff;
+}
+
+.food-waste-cta p {
+  max-width: 650px;
+  margin: 0 auto 28px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.food-waste-footer {
+  padding: 35px 7%;
+  text-align: center;
+  background: #0f261b;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.food-waste-footer p {
+  margin: 6px 0;
+}
+
+/* 手機版 */
+@media (max-width: 700px) {
+  .food-waste-header {
+    min-height: 70px;
+    padding: 10px 5%;
+  }
+
+  .food-waste-logo {
+    height: 42px;
+  }
+
+  .food-waste-contact-button {
+    padding: 9px 15px;
+    font-size: 14px;
+  }
+
+  .food-waste-hero {
+    padding: 75px 6% 70px;
+  }
+
+  .food-waste-hero h1 {
+    font-size: 42px;
+  }
+
+  .food-waste-hero h1 span {
+    font-size: 27px;
+  }
+
+  .food-waste-lead {
+    font-size: 16px;
+  }
+
+  .food-waste-section {
+    width: 88%;
+    padding: 65px 0;
+  }
+
+  .food-waste-service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-waste-card {
+    padding: 25px;
+  }
+
+  .food-waste-area {
+    width: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .food-waste-cta {
+    margin: 20px 5% 60px;
+    padding: 48px 7%;
+    border-radius: 22px;
+  }
+}
