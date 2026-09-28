@@ -301,11 +301,12 @@ footer {
   background: #172b21;
   color: #dbe4de;
   font-size: 13px;
-}
+  }
 .hero-image {
   width: 46%;
   max-width: 620px;
   margin-left: auto;
+  position: relative;
 }
 
 .hero-image img {
@@ -315,6 +316,30 @@ footer {
   mix-blend-mode: multiply;
   opacity: 0.94;
 }
+
+.hero-rotating-arrow {
+  position: absolute;
+  top: 50%;
+  left: 56%;
+  width: 30%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  animation: rotateArrow 10s linear infinite;
+  mix-blend-mode: normal;
+  opacity: 1;
+  pointer-events: none;
+}
+
+@keyframes rotateArrow {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
 /* ===== 智慧循環圖片 ===== */
 .smart-recycling-section {
   padding: 16px 3% 0;
@@ -390,9 +415,9 @@ footer {
 
 .hero-image {
   position: absolute;
-  width: 125px;
-  right: 7%;
-  top: 130px;
+  width: 155px;
+  right: 0%;
+  top: 120px;
   margin: 0;
 }
 
@@ -735,4 +760,4 @@ footer {
     padding: 48px 7%;
     border-radius: 22px;
   }
-}
+  }

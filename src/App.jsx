@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import './App.css'
-import heroEarth from './assets/hero-earth.png'
+import heroEarth from "./assets/hero-earth-clean.png";
 import smartRecycling from './assets/smart-recycling.png'
 import zhenglianLogo from './assets/zhenglian-logo.png'
 import HsinchuFoodWastePage from './HsinchuFoodWastePage'
@@ -78,8 +78,18 @@ function App() {
           </div>
 
         <div className="hero-image">
-         <img src={heroEarth} alt="永續循環" />
-        </div>
+  <img
+    src={heroEarth}
+    alt="永續循環"
+    className="hero-earth-base"
+  />
+
+  <img
+    src="/rotating-arrow.png"
+    alt=""
+    className="hero-rotating-arrow"
+  />
+</div>
         
         </section>
         <section className="smart-recycling-section">
