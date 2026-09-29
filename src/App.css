@@ -303,13 +303,14 @@ footer {
   font-size: 13px;
   }
 .hero-image {
-  width: 46%;
+  width: 35%;
   max-width: 620px;
   margin-left: auto;
   position: relative;
+  right: -2%;
 }
 
-.hero-image img {
+.hero-earth-base {
   display: block;
   width: 100%;
   height: auto;
@@ -322,6 +323,7 @@ footer {
   top: 50%;
   left: 56%;
   width: 30%;
+  aspect-ratio: 1 / 1;
   height: auto;
   transform: translate(-50%, -50%);
   transform-origin: center center;
@@ -415,14 +417,21 @@ footer {
 
 .hero-image {
   position: absolute;
-  width: 155px;
-  right: 0%;
-  top: 105px;
+  width: clamp(120px, 38vw, 155px);
+  aspect-ratio: 1 / 1;
+  right: 5%;
+  top: 100px;
   margin: 0;
+}
+.hero-rotating-arrow {
+  top: 41%;
+  left: 66%;
+}
 }
 
 .hero-image img {
-  width: 100%;
+  display: block;
+  width: 120%;
   height: auto;
 }
 
@@ -440,7 +449,7 @@ footer {
     flex-direction: column;
     gap: 8px;
   }
-}
+
 /* ========================================
    新竹廚餘回收業者專屬頁面
    ======================================== */
