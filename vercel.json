@@ -3,6 +3,10 @@
     {
       "source": "/hsinchu-food-waste-recycling",
       "destination": "/index.html"
+    },
+    {
+      "source": "/blog/food-waste-reduction-esg",
+      "destination": "/index.html"
     }
   ]
 }
