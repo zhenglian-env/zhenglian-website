@@ -307,7 +307,7 @@ footer {
   max-width: 620px;
   margin-left: auto;
   position: relative;
-  right: -2%;
+  right: 1%;
 }
 
 .hero-earth-base {
@@ -316,21 +316,24 @@ footer {
   height: auto;
   mix-blend-mode: multiply;
   opacity: 0.94;
+
+  position: relative;
+  left: -6%;
 }
 
 .hero-rotating-arrow {
   position: absolute;
   top: 50%;
   left: 56%;
-  width: 30%;
+  width: 27%;
   aspect-ratio: 1 / 1;
   height: auto;
   transform: translate(-50%, -50%);
   transform-origin: center center;
   animation: rotateArrow 10s linear infinite;
-  mix-blend-mode: normal;
-  opacity: 1;
-  pointer-events: none;
+ mix-blend-mode: multiply;
+opacity: 0.92;
+pointer-events: none;
 }
 
 @keyframes rotateArrow {
@@ -770,3 +773,330 @@ footer {
     border-radius: 22px;
   }
   }
+/* =========================
+   永續知識｜正聯觀點
+========================= */
+
+.knowledge {
+  padding: 90px 8%;
+  background:
+    linear-gradient(
+      180deg,
+      #f7fbf8 0%,
+      #ffffff 100%
+    );
+}
+
+.knowledge-heading {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.knowledge-heading h2 {
+  margin: 12px 0 14px;
+  color: #123d2d;
+  font-size: 38px;
+  line-height: 1.35;
+}
+
+.knowledge-heading p {
+  margin: 0 auto;
+  max-width: 720px;
+  color: #667a70;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.knowledge-card {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+
+  overflow: hidden;
+  border-radius: 26px;
+
+  background: #ffffff;
+  border: 1px solid #dce8e1;
+
+  text-decoration: none;
+  color: inherit;
+
+  box-shadow:
+    0 18px 45px rgba(25, 70, 49, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.knowledge-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 24px 55px rgba(25, 70, 49, 0.14);
+}
+
+.knowledge-image {
+  min-height: 330px;
+  overflow: hidden;
+  background: #eef6f1;
+}
+
+.knowledge-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  transition: transform 0.35s ease;
+}
+
+.knowledge-card:hover .knowledge-image img {
+  transform: scale(1.03);
+}
+
+.knowledge-content {
+  padding: 48px 44px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.knowledge-tag {
+  display: inline-block;
+  width: fit-content;
+
+  margin-bottom: 18px;
+  padding: 7px 14px;
+
+  border-radius: 999px;
+
+  background: #e7f4ec;
+  color: #176b4a;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.knowledge-content h3 {
+  margin: 0 0 18px;
+
+  color: #123d2d;
+  font-size: 30px;
+  line-height: 1.4;
+}
+
+.knowledge-content p {
+  margin: 0;
+
+  color: #5f7369;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.knowledge-link {
+  margin-top: 28px;
+
+  color: #176b4a;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+
+/* =========================
+   永續知識手機版
+========================= */
+
+@media (max-width: 800px) {
+
+  .knowledge {
+    padding: 65px 20px;
+  }
+
+  .knowledge-heading {
+    margin-bottom: 28px;
+  }
+
+  .knowledge-heading h2 {
+    font-size: 29px;
+  }
+
+  .knowledge-heading p {
+    font-size: 16px;
+  }
+
+  .knowledge-card {
+    grid-template-columns: 1fr;
+    border-radius: 22px;
+  }
+
+  .knowledge-image {
+    min-height: auto;
+  }
+
+  .knowledge-image img {
+    height: auto;
+  }
+
+  .knowledge-content {
+    padding: 30px 24px 34px;
+  }
+
+  .knowledge-content h3 {
+    font-size: 24px;
+  }
+}
+/* ===== 手機版導覽列顯示 ===== */
+@media (max-width: 700px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 18px;
+    gap: 12px;
+  }
+
+  .navbar .brand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+  }
+
+  .navbar nav a {
+    display: inline-block;
+    padding: 7px 10px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
+/* ==================================
+   手機版漢堡選單
+================================== */
+
+/* 電腦版不顯示漢堡按鈕 */
+.menu-toggle {
+  display: none;
+}
+
+
+/* 手機版 */
+@media (max-width: 700px) {
+
+  .navbar {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 18px;
+    min-height: 72px;
+  }
+
+  .navbar .brand {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .navbar .brand-logo {
+    width: 145px;
+    max-width: 60vw;
+  }
+
+
+  /* ☰ 按鈕 */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 9px;
+    border: 0;
+    border-radius: 10px;
+
+    background: #176b4a;
+    cursor: pointer;
+
+    position: relative;
+    z-index: 1001;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+
+    border-radius: 10px;
+    background: #ffffff;
+  }
+
+
+  /* 預設先把手機選單收起來 */
+  .navbar nav {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    padding: 12px 18px 18px;
+
+    background: rgba(255, 255, 255, 0.98);
+    border-top: 1px solid #e4ece7;
+
+    box-shadow:
+      0 12px 25px rgba(20, 60, 42, 0.1);
+
+    z-index: 1000;
+  }
+
+
+  /* 點 ☰ 後顯示 */
+  .navbar nav.open {
+    display: flex;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 4px;
+  }
+
+  .navbar nav a {
+    display: block;
+
+    padding: 12px 14px;
+
+    color: #28483b;
+    font-size: 15px;
+    font-weight: 700;
+
+    text-align: left;
+    text-decoration: none;
+
+    border-radius: 8px;
+  }
+
+  .navbar nav a:hover {
+    background: #edf7f1;
+    color: #176b4a;
+  }
+}

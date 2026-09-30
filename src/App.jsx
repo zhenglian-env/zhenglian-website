@@ -1,10 +1,12 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import heroEarth from "./assets/hero-earth-clean.png";
 import smartRecycling from './assets/smart-recycling.png'
 import zhenglianLogo from './assets/zhenglian-logo.png'
 import HsinchuFoodWastePage from './HsinchuFoodWastePage'
+import FoodWasteESGPage from './FoodWasteESGPage'
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false)
   const path = window.location.pathname.replace(/\/+$/, '') || '/'
 
   useEffect(() => {
@@ -25,6 +27,10 @@ function App() {
       return () => clearTimeout(timer)
     }
   }, [path])
+  
+  if (path === '/blog/food-waste-reduction-esg') {
+  return <FoodWasteESGPage />
+}
 
   if (path === '/hsinchu-food-waste-recycling') {
     return <HsinchuFoodWastePage />
@@ -41,12 +47,39 @@ function App() {
   />
 </div>
 
-        <nav>
-          <a href="#about">關於正聯</a>
-          <a href="#services">服務項目</a>
-          <a href="#sustainability">永續循環</a>
-          <a href="#contact">聯絡我們</a>
-        </nav>
+        <button
+  className="menu-toggle"
+  type="button"
+  aria-label="開啟導覽選單"
+  aria-expanded={menuOpen}
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<nav className={menuOpen ? 'open' : ''}>
+  <a href="#about" onClick={() => setMenuOpen(false)}>
+    關於正聯
+  </a>
+
+  <a href="#services" onClick={() => setMenuOpen(false)}>
+    服務項目
+  </a>
+
+  <a href="#sustainability" onClick={() => setMenuOpen(false)}>
+    永續循環
+  </a>
+
+  <a href="#knowledge" onClick={() => setMenuOpen(false)}>
+    永續知識
+  </a>
+
+  <a href="#contact" onClick={() => setMenuOpen(false)}>
+    聯絡我們
+  </a>
+</nav>
       </header>
 
       <main>
@@ -163,7 +196,49 @@ function App() {
             <strong>聯手減碳</strong>
           </div>
         </section>
+        
+        <section className="knowledge" id="knowledge">
+  <div className="knowledge-heading">
+    <div className="section-label">SUSTAINABILITY INSIGHTS</div>
+    <h2>永續知識｜正聯觀點</h2>
+    <p>
+      從廚餘減量、循環經濟到 ESG，
+      分享與企業及日常生活真正有關的環境知識。
+    </p>
+  </div>
 
+  <a
+    href="/blog/food-waste-reduction-esg"
+    className="knowledge-card"
+  >
+    <div className="knowledge-image">
+      <img
+        src="/food-waste-esg-cover.png"
+        alt="廚餘減量與 ESG"
+      />
+    </div>
+
+    <div className="knowledge-content">
+      <span className="knowledge-tag">
+        ESG・廚餘管理
+      </span>
+
+      <h3>
+        廚餘減量，不只是少一桶垃圾
+      </h3>
+
+      <p>
+        從清運到數據管理，看見企業永續的新方向。
+        為什麼廚餘減量開始受到重視？
+        企業又能如何透過紀錄，看見真正的改善成果？
+      </p>
+
+      <div className="knowledge-link">
+        閱讀完整文章 →
+      </div>
+    </div>
+  </a>
+</section>
         <section className="contact" id="contact">
           <div>
             <div className="section-label">CONTACT</div>

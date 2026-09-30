@@ -1,0 +1,540 @@
+/* =========================
+   正聯環保 ESG 文章頁
+========================= */
+
+.esg-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, #f5faf7 0%, #ffffff 28%, #ffffff 100%);
+  color: #24352e;
+  font-family:
+    "Noto Sans TC",
+    "Microsoft JhengHei",
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================
+   頁首
+========================= */
+
+.esg-header {
+  width: 100%;
+  min-height: 82px;
+  padding: 14px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e2ebe6;
+
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+}
+
+.esg-logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.esg-logo {
+  width: 180px;
+  max-width: 42vw;
+  height: auto;
+  display: block;
+}
+
+.esg-back {
+  color: #176b4a;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.esg-back:hover {
+  color: #0c5035;
+}
+
+
+/* =========================
+   文章主體
+========================= */
+
+.esg-article {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 70px 0 90px;
+}
+
+.esg-category {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-bottom: 24px;
+
+  border-radius: 999px;
+  background: #e6f4ec;
+  color: #176b4a;
+
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.esg-article h1 {
+  margin: 0;
+  color: #123d2d;
+
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.esg-subtitle {
+  margin: 20px 0 0;
+
+  color: #557067;
+  font-size: 22px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.esg-date {
+  margin: 20px 0 50px;
+
+  color: #87978f;
+  font-size: 14px;
+}
+.esg-cover {
+  margin: 0 0 50px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #dce8e1;
+}
+
+.esg-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* =========================
+   內文
+========================= */
+
+.esg-article section {
+  margin: 58px 0;
+}
+
+.esg-article h2 {
+  position: relative;
+
+  margin: 0 0 22px;
+  padding-left: 18px;
+
+  color: #145438;
+  font-size: 28px;
+  line-height: 1.45;
+}
+
+.esg-article h2::before {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  top: 7px;
+
+  width: 5px;
+  height: calc(100% - 12px);
+
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    #2c9b65,
+    #81bb46
+  );
+}
+
+.esg-article p {
+  margin: 0 0 22px;
+
+  color: #40554c;
+  font-size: 18px;
+  line-height: 2;
+}
+
+
+/* =========================
+   開場區塊
+========================= */
+
+.esg-intro {
+  padding: 36px 40px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #edf7f1,
+      #f9fcfa
+    );
+
+  border: 1px solid #dcebe2;
+}
+
+
+/* =========================
+   引言
+========================= */
+
+.esg-quote {
+  margin: 32px 0;
+  padding: 28px 32px;
+
+  border-left: 5px solid #2a9561;
+  border-radius: 0 18px 18px 0;
+
+  background: #f0f8f3;
+
+  color: #176b4a;
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   數據區塊
+========================= */
+
+.esg-data-box {
+  margin: 34px 0;
+  padding: 28px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+
+  border-radius: 22px;
+  background: #123d2d;
+}
+
+.esg-data-box > div {
+  padding: 22px 14px;
+
+  text-align: center;
+
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.esg-data-box strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #a7d584;
+  font-size: 17px;
+}
+
+.esg-data-box span {
+  display: block;
+
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.esg-data-box .esg-result {
+  grid-column: 1 / -1;
+
+  padding: 20px;
+
+  background: #76ad43;
+  color: #ffffff;
+
+  font-size: 24px;
+  font-weight: 900;
+}
+
+
+/* =========================
+   流程圖
+========================= */
+
+.esg-flow {
+  margin: 35px 0;
+  padding: 30px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #163f30,
+      #0f5c41
+    );
+}
+
+.esg-flow span {
+  padding: 12px 18px;
+
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: #176b4a;
+
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.esg-flow b {
+  color: #a6d36c;
+  font-size: 22px;
+}
+
+
+/* =========================
+   強調句
+========================= */
+
+.esg-highlight {
+  margin: 30px 0;
+  padding: 28px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e5f5eb,
+      #f3faf5
+    );
+
+  color: #11613e;
+
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   結尾金句
+========================= */
+
+.esg-final-quote {
+  margin: 36px 0 20px;
+  padding: 42px 34px;
+
+  text-align: center;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #123d2d,
+      #176b4a
+    );
+}
+
+.esg-final-quote p {
+  margin: 8px 0;
+
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.65;
+}
+
+
+/* =========================
+   聯絡區塊
+========================= */
+
+.esg-contact {
+  margin-top: 80px !important;
+  padding: 46px 40px;
+
+  text-align: center;
+
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef8f2,
+      #f9fcfa
+    );
+
+  border: 1px solid #d9ebe0;
+}
+
+.esg-contact h2 {
+  padding-left: 0;
+
+  text-align: center;
+}
+
+.esg-contact h2::before {
+  display: none;
+}
+
+.esg-contact p {
+  max-width: 680px;
+  margin: 0 auto 28px;
+}
+
+.esg-contact-button {
+  display: inline-block;
+
+  padding: 15px 30px;
+
+  border-radius: 999px;
+
+  background: #176b4a;
+  color: white;
+
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 25px rgba(23, 107, 74, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.esg-contact-button:hover {
+  background: #0e5136;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   頁尾
+========================= */
+
+.esg-footer {
+  padding: 38px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+
+  text-align: center;
+
+  background: #102f24;
+  color: #ffffff;
+}
+
+.esg-footer strong {
+  font-size: 17px;
+}
+
+.esg-footer span {
+  color: #bcd4c6;
+  font-size: 14px;
+}
+
+
+/* =========================
+   手機版
+========================= */
+
+@media (max-width: 700px) {
+
+  .esg-header {
+    min-height: 68px;
+    padding: 10px 18px;
+  }
+
+  .esg-logo {
+    width: 135px;
+  }
+
+  .esg-back {
+    font-size: 13px;
+  }
+
+  .esg-article {
+    width: calc(100% - 32px);
+    padding: 45px 0 65px;
+  }
+
+  .esg-article h1 {
+    font-size: 35px;
+  }
+
+  .esg-subtitle {
+    font-size: 19px;
+  }
+
+  .esg-article h2 {
+    font-size: 23px;
+  }
+
+  .esg-article p {
+    font-size: 17px;
+    line-height: 1.9;
+  }
+
+  .esg-intro {
+    padding: 26px 22px;
+  }
+
+  .esg-quote {
+    padding: 22px;
+    font-size: 20px;
+  }
+
+  .esg-data-box {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .esg-data-box .esg-result {
+    grid-column: auto;
+  }
+
+  .esg-flow {
+    flex-direction: column;
+  }
+
+  .esg-flow b {
+    transform: rotate(90deg);
+  }
+
+  .esg-highlight {
+    font-size: 20px;
+  }
+
+  .esg-final-quote {
+    padding: 30px 20px;
+  }
+
+  .esg-final-quote p {
+    font-size: 20px;
+  }
+
+  .esg-contact {
+    padding: 34px 22px;
+  }
+}
